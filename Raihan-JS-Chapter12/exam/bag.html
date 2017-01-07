@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bag</title>
+    <style>
+
+      body{
+          background: #1cf7c2;
+        }
+      #whitebox{
+        background-color: green;
+      }
+      #hline{
+        margin: 0px 0 -80px 410px;
+        text-shadow:5px 5px 10px red;
+        font-size: 100px;
+      }
+      .sidenav {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          background-color: green;
+          overflow-x: hidden;
+          transition: 4s;
+          padding-top: 60px;
+      }
+      .sidenav a {
+          padding: 8px 8px 8px 100px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+          transition: 0.3s
+      }
+      .sidenav a:hover, .offcanvas a:focus{
+          color: #f1f1f1;
+      }
+      .sidenav .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          margin-left: 50px;
+      }
+        #sidebar{
+          padding: 10px;
+          margin-left:1250px;
+          margin-top: -50px;
+        }
+       
+        #productList{
+          position: absolute;
+          border: 5px solid gray;
+          padding: 10px 15px 130px 15px;
+          margin-left: 350px;
+          margin-right: 490px;
+          margin-top: 100px;
+        } 
+        #productList #bag-1_label {
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: 0 0 -138.5px 0;
+        }
+        #productList #bag-2_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 162px;
+        }
+        #productList #bag-3_label {
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 324px;
+        }
+        #productList #bag-4_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 486px;
+        }
+        #productList #bag-5_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 648px;
+        }
+        #productList #bag-6_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: 150px 0 -138.5px 0;
+        }
+         #productList #bag-7_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138px 0 -138.5px 162px;
+        }
+         #productList #bag-8_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 324px;
+        }
+         #productList #bag-9_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 486px;
+        }
+         #productList #bag-10_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 648px;
+        }
+        #productList #bag-11_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: 150px 0 -138.5px 0;
+        }
+         #productList #bag-12_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138px 0 -138.5px 162px;
+        }
+         #productList #bag-13_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 324px;
+        }
+         #productList #bag-14_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 486px;
+        }
+         #productList #bag-15_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 648px;
+        }
+        #productList #bag-16_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: 150px 0 -138.5px 0;
+        }
+         #productList #bag-17_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138px 0 -138.5px 162px;
+        }
+         #productList #bag-18_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 324px;
+        }
+         #productList #bag-19_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 486px;
+        }
+         #productList #bag-20_label{
+          height: 250px;
+          width: 150px;
+          border: 4px solid gray;
+          margin: -138.5px 0 -138.5px 648px;
+        }
+        #showMoreList{
+        margin-top: 135px;
+        width: 805px;
+        height: 40px; 
+        }
+        #orderList{
+          border: 5px solid gray;
+          padding: 10px;
+          margin-left: 10px;
+
+        }
+        ul.firstMenu{
+          list-style-type: none;
+          line-height: 50px;
+        }
+        #content{
+          background-image: url(e-commerce1.jpg);
+          background-repeat: no-repeat;
+          position: absolute;
+          height: 100%;
+        }
+        input[type=checkbox] + label
+         {
+             background: #999;
+             height: 16px;
+             width: 16px;
+             display:inline-block;
+             padding: 0 0 0 0px;
+         }
+         input[type=checkbox]:checked + label
+          {
+              background: #0080FF;
+              height: 16px;
+              width: 16px;
+              display:inline-block;
+              padding: 0 0 0 0px;
+          }
+         
+    </style>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+          compute();
+          function compute(){
+          $("input").click(function(){
+             var order = document.forms[0];
+             var orderProduct = "";
+             var price = 0;
+             for (var i = 0; i <order.length; i++) {
+               
+               if (order[i].checked) {
+                var item = order[i].value;
+
+                  if (item == "bag-1"){
+                  price = price + 200;
+                } else if (item == "bag-2") {
+                  price = price + 500;
+                } else if (item == "bag-3") {
+                  price = price + 1000;
+                } else if (item == "bag-4") {
+                  price = price + 2000;
+                } else if (item == "bag-5") {
+                  price = price + 400;
+                } else if (item == "bag-6") {
+                  price = price + 400;
+                } else if (item == "bag-7") {
+                  price = price + 300;
+                } else if (item == "bag-8") {
+                  price = price + 450;
+                } else if (item == "bag-9") {
+                  price = price + 240;
+                } else if (item == "bag-10") {
+                  price = price + 400;
+                } else if (item == "bag-11") {
+                  price = price + 450;
+                } else if (item == "bag-12"){
+                  price = price + 350;
+                } else if (item == "bag-13"){
+                  price = price + 550;
+                } else if (item == "bag-14"){
+                  price = price + 650;
+                } else if (item == "bag-15"){
+                  price = price + 600;
+                } else if (item == "bag-16"){
+                  price = price + 560;
+                } else if (item == "bag-17"){
+                  price = price + 470;
+                } else if (item == "bag-18"){
+                  price = price + 390;
+                } else if (item == "bag-19"){
+                  price = price + 420;
+                } else if (item == "bag-20"){
+                  price = price + 440;
+                } 
+
+               
+                orderProduct = orderProduct + "<ul>" + order[i].value + "</ul>";
+                  $("#amount").text(price);
+               }
+             }
+             $("#productlists").html(orderProduct);
+             $("#priceList").html(price);
+             // $("#labelList").html("");
+          });
+        }
+        var startListNumber = 0;
+        var stopListNumber = 5;
+
+        $("#showMoreList").click(function(){
+              $.ajax({
+                  type: "GET",
+                  url: "http://localhost/exam/itemList_bag.html",
+                  success: function(html){
+                    var a = $(html);
+                    var b = a.filter("#moreItem");
+                    var c = b.slice(startListNumber,stopListNumber);
+                    $("#items").append(c);
+                    startListNumber +=5;
+                    stopListNumber +=5;
+                    compute();
+                  }
+              });
+          });
+      });
+      </script>
+
+</head>
+<body>
+    
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+    <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="shoes.html">Shoes</a>
+    <a href="bag.html">Bag</a>
+    </div>
+
+    <p id="hline">Online Shopping</p>
+
+      <div id="productList">
+        <form method="GET" action="" onSubmit="return false;" id="items">
+
+        <div id="bag-1_label">
+          <label for="bag-1">
+          <input type="checkbox" id="bag-1" name="order" value="bag-1"/><br>
+          <img src="http://localhost/exam/bag/bag-1.jpg" style="width:150px; height:150px"><hr noshade>
+          bag-1<br>$200
+          </label> 
+        </div><br>
+
+        <div id="bag-2_label">
+        <label for="bag-2">
+            <input type="checkbox" id="bag-2" name="order" value="bag-2"/><br>
+            <img src="http://localhost/exam/bag/bag-2.jpg" style="width:150px; height:150px">
+            <hr noshade>bag-2<br>$500
+        </label>
+        </div><br>
+
+        <div id="bag-3_label">
+        <label for="bag-3">
+            <input type="checkbox" id="bag-3" name="order" value="bag-3"/><br>
+            <img src="http://localhost/exam/bag/bag-3.jpg" style="width:150px; height:150px"><hr noshade>bag-3<br>$1000
+        </label>
+        </div><br>
+
+        <div id="bag-4_label">
+        <label for="bag-4">
+            <input type="checkbox" id="bag-4" name="order" value="bag-4"/><br>
+            <img src="http://localhost/exam/bag/bag-4.jpg" style="width:150px; height:150px"><hr noshade>bag-4<br>$2000
+        </label>
+        </div><br>
+
+        <div id="bag-5_label">
+        <label for="bag-5">
+            <input type="checkbox" id="bag-5" name="order" value="bag-5"/><br>
+            <img src="http://localhost/exam/bag/bag-5.jpg" style="width:150px; height:150px"><hr noshade>bag-5<br>$400
+        </label>
+        </div><br>
+
+
+        </form>
+        <button id="showMoreList">Display More Item</button><br><br>
+        <button type="button" onclick="compute()">Add to Cart</button>
+      </div><br/>
+
+
+    <script>
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "330px";
+    }
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+
+      
+    <div id="sidebar">
+      <strong>Cart</strong>
+      <br>
+      <strong>List of Selected Items:</strong><br><br>
+      <table rules="all" frame="box" width="200" Height="50">
+            <tr>
+              <th>Purchased Item</th>
+              <th>Price</th>
+            </tr>
+            <tr>
+              <td id="productlists">
+              </td>
+              <td id="priceList">
+              </td>
+            </tr>
+      </table>
+
+     <!--  <div id="orderList">
+        <label id="labelList">No Order</label><br/> -->
+
+        <!-- <label id="lists"></label><br/> -->
+      <!-- </div><br> -->
+        <label><h3>Total Amount is : </h3></label>
+        <label id="amount">0</label>
+    </div>
+</body>
+</html>
